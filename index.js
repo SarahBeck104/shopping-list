@@ -8,7 +8,7 @@ $(function(){
       event.preventDefault();
   
   
-  }
+  })
 
   // enter new items and add them as an 'li'
   $('.shopping-list').append(
