@@ -7,7 +7,7 @@ $(function(){
       // stop default form from submitting
       event.preventDefault();
   
-  
+ 
   })
 
   // enter new items and add them as an 'li'
