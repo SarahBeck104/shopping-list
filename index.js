@@ -12,8 +12,8 @@ $(function(){
 
   // enter new items and add them as an 'li'
 const listItem = $('.shopping-list-entry').val();
-$('.shopping-list').val('');
-
+$('.shopping-list-entry').val('');
+        
 $('.shopping-list').append(
     `<li>
     <span class="shopping-item">${listItem}</span>
