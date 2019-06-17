@@ -8,10 +8,13 @@ $(function(){
       event.preventDefault();
   
  
-  })
+  
 
   // enter new items and add them as an 'li'
-  $('.shopping-list').append(
+const listItem = $('.shopping-list-entry').val();
+$('.shopping-list').val('');
+
+$('.shopping-list').append(
     `<li>
     <span class="shopping-item">${listItem}</span>
     <div class="shopping-item-controls">
@@ -21,15 +24,17 @@ $(function(){
           <button class="shopping-item-delete">
             <span class="button-label">delete</span>
           </button>
-    `
-  )
+        </div>
+      </li>`);
+});
+
 
   // permanently remove items from the list
 //listen
-$('shopping-list').on('click', '.shopping-item.delete', function(event) {
+$('shopping-list').on('click', '.shopping-item-delete', function(event) {
   //removes the closest shopping list item
   $(this).closest('li').remove();
-})
+});
 
   // check and uncheck items
   //checked off styling
@@ -37,7 +42,7 @@ $('shopping-list').on('click', '.shopping-item.delete', function(event) {
 $('shopping-list').on('click', '.shopping-item-toggle', function(event) {
 
   $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
-})
+});
 
 
 });
