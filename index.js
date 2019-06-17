@@ -34,7 +34,7 @@ $('.shopping-list').append(
 $('shopping-list').on('click', '.shopping-item-delete', function(event) {
   //removes the closest shopping list item
   $(this).closest('li').remove();
-});
+})
 
   // check and uncheck items
   //checked off styling
@@ -46,3 +46,4 @@ $('shopping-list').on('click', '.shopping-item-toggle', function(event) {
 
 
 });
+
