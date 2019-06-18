@@ -11,8 +11,8 @@ $(function(){
   
 
   // enter new items and add them as an 'li'
-const listItem = $('.shopping-list-entry').val();
-$('.shopping-list-entry').val('');
+const listItem = $('#shopping-list-entry').val();
+$('#shopping-list-entry').val('');
         
 $('.shopping-list').append(
     `<li>
@@ -31,7 +31,7 @@ $('.shopping-list').append(
 
   // permanently remove items from the list
 //listen
-$('shopping-list').on('click', '.shopping-item-delete', function(event) {
+$('.shopping-list').on('click', '.shopping-item-delete', function(event) {
   //removes the closest shopping list item
   $(this).closest('li').remove();
 })
@@ -39,7 +39,7 @@ $('shopping-list').on('click', '.shopping-item-delete', function(event) {
   // check and uncheck items
   //checked off styling
 
-$('shopping-list').on('click', '.shopping-item-toggle', function(event) {
+$('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
 
   $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
 });
